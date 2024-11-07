@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><center>Nama-Nama Pahlawan</center></h1>
+  <div id="menyala"></div>
+  <script>
+    async function dapatkansurah(){
+      
+       try {
+        menyala.innerHTML = "<span class='loader'></span>";
+        const ambildata = await
+      fetch("https://indonesia-public-static-api.vercel.app/api/heroes");
+      const dataasli = await
+      ambildata.json();
+      menyala.innerHTML = "";
+ 
+     dataasli.forEach(element =>{
+       menyala.innerHTML += `<p>Nama: ${element.name} </p>`;
+       menyala.innerHTML += `<p>Tahun Lahir: ${element.birth_year} </p>`;
+       menyala.innerHTML += `<p>Wafat: ${element.death_year} </p>`;
+       menyala.innerHTML += `<p>Deskripsi Pahlawan: ${element.description} </p>`;
+       menyala.innerHTML += `<p>Tahun Kenaikan: ${element.ascension_year}</p>`;
+       menyala.innerHTML += `<hr/>`
+       menyala.innerHTML += `<hr/>`
+      
+     });
+      } catch (error) {
+        menyala.innerHTML = "salah codenya"
+       }
+    }
+    dapatkansurah()
+    </script>
+</body>
+</html>

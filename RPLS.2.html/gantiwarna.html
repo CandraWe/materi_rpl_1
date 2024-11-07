@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+    <style>
+    .dasar{
+        width : 100px;
+        height:100px;
+        background:red;
+        transition:all 0.5s;
+        /* opacity:0; */
+        transform:translate(0);
+    }
+    .biru{
+        transform:translate(200px, 500px) ;
+        /* opacity:1; */
+    }
+    </style>
+    
+    <!-- kamis 1 februari 2024 -->
+        <button onClick="rubah()">klik</button>
+        <div class="dasar"> </div>
+    
+        <script>
+            let kotak =document.querySelector(".dasar");
+            //
+            function rubah(){
+                kotak.classList.toggle("biru")
+            }
+        </script>
+        
+    </body>
+</html>

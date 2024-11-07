@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <style>
+        body{
+            font-family: Arial;
+        }
+        .utama{
+            background-color: purple;
+            justify-content: center;
+            width: 50vw;
+        }
+        .judul{
+            text-align: center;
+            color: white;
+        }
+        .sidebar{
+            background-color: cyan;
+            width: 50vw;
+        }
+        .kosong{
+            width: 0;
+        }
+        .tutup{
+            width: 100vw;
+        }
+    </style>
+    
+    <!-- tugas 03 februari 2024 membuat sidebar bootstrap -->
+    <div class="container">
+        <div class="utama">
+            <h1 class="judul">BOOTSTRAP</h1>
+            <i onClick="buka()" id="bukasidebar" class="bi bi-list"></i>
+            <!-- <button onclick="buka()" id="bukasidebar">&#9776;</button>  -->
+        </div>
+        <div class="sidebar" id="sidebar">
+            <h1 class="judul">BOOTSTRAP</h1>
+            <i id="tuutpsidebar" class="bi bi-x-lg"></i>
+            <!-- <button>&times</button> -->
+        </div>
+    </div>
+
+    <script>
+        let buka = document.getElementById("bukasidebar");
+        function buka(){
+            if(buka.classList.contains("bi bi-list")){
+                buka.classList.replace("bi bi-list" , "bi bi-x-lg")
+            }else{
+                buka.classList.replace("bi bi-list" , "bi bi-x-lg")
+            }
+        }
+        let tutup = document.getElementById
+    </script>
+
+
+
+
+</body>
+</html>

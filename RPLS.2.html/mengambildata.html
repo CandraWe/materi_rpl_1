@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Senin 05 Februari 2024 -->
+    <!-- mengambil data dari sumber orang lain dngn praktis -->
+    
+    <script>
+
+        // penggambaran SYNCHRONOUS 
+        // jika dia belum melaksakan yang pertama maka akan tidak berlanjut
+        // akan mulai dari atas berurut kebawah
+        console.log("1");
+        console.log("2");
+
+        var data ="";
+
+        setTimeout(() => {
+            data = "ini data";
+            console.log(data) //agar langsung muncul tanpa nunggu
+        }, 1000);
+
+        // tidak berurut menggunakan setTimeout
+        //setTimeout(() => { //asynchronous yang tidak berurutan
+        //     console.log("3");
+        // },500 ); // 500 milisecond itu waktu muncul si nomor ini
+
+        // setInterval(() => {
+        //     console.log("10")
+        // },500 ); // ini dijalankan berkalikali tidak ada batasnya
+        // console.log("4");
+        // console.log("5");
+        // console.log("6");
+    </script>
+
+</body>
+</html>

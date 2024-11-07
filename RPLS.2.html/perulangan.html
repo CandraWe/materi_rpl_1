@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link 
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div id="kontener" >
+
+    </div>
+        
+    <!-- Perulangan  -->
+    <!-- senin, 22 Jnauari 2024 -->
+    <script>
+        let container = document.getElementById("kontener")
+
+        // pake innerHTML agar tidak usah bikin let / var lagi
+        
+        for(var i=0 ; i<10 ; i++){ 
+            container.innerHTML += `<i class = "bi bi-heart lope" id="icon_love" style = "font-size : 100px" onclick = "rubah(${i})"></i>` //urutan element ny diatur dalam kurung ()
+            // diatur menurut i
+            // jika ingin bisa menggunakan $ pakai back clip ``
+            
+            // pake += karena kalau pake = akan tertimpa
+        }
+
+        function rubah(berurut){
+            let LOVE = document.getElementsByClassName("lope");
+            // pake yng bisa memanggil banyak yaitu classname
+
+            if(LOVE[berurut].classList.contains("bi-heart")){
+                LOVE[berurut].classList.replace("bi-heart", "bi-heart-fill")
+            }else{
+                LOVE[berurut].classList.replace( "bi-heart", "bi-heart-fill")
+            }
+
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    
+    <!-- Senin 05 Februari 2024 -->
+    <!-- AJAX = Asynchronous JavaScript And XML.-->
+    <!-- XML = eXtensible Markup Language -->
+
+    <!-- Sekarang pake Fetch -->
+    <!-- async itu adalah asynchronous -->
+
+    <script>
+        // async function dapatkansurat() { //pertama bikin function tapi diawali async
+        //     //panggil pakai fetch await
+        //     const ambildata = await fetch("https://quran-api-id.vercel.app/surahs"); //kemudian dtaanya dijadikan json
+        //     const dataAsli = await ambildata.json(); //rubah
+        //     console.log(dataAsli);
+        //   }
+        //   dapatkansurat();
+
+        // panggil deskripsi saja
+
+          async function dapatkansurat() { //pertama bikin function tapi diawali async
+            //panggil pakai fetch await
+            const ambildata = await fetch("https://quran-api-id.vercel.app/surahs"); //kemudian dtaanya dijadikan json
+            const dataAsli = await ambildata.json(); //rubah
+
+            //ke html kan 
+            dataAsli.forEach(element => {
+                container.innerHTML += ` <p> ${element.description} </p>` //pakai $ biar bisa nampil
+            });
+          }
+          dapatkansurat();
+
+    </script>
+      
+
+</body>
+</html>

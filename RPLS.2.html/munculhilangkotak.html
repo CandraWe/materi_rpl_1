@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+    <style>
+        .dasar{
+            width : 100px;
+            height:100px;
+            background:red;
+            transition:all 0.5s;
+            opacity:0;
+        }
+        .biru{
+            opacity:1;
+        }
+            
+    </style>
+    <!-- kamis 1 februari 2024 -->
+    
+    
+        <button onClick="muncul()">klik</button>
+        <div class="dasar"> </div>
+        <button onClick="hilang()">close</button>
+    
+        <script>
+            let kotak =document.querySelector(".dasar");
+            
+            function muncul(){
+                kotak.classList.add("biru")
+            }
+            function hilang(){
+                kotak.classList.remove("biru")
+            }
+            
+        </script>
+        
+    </body>
+</html>
